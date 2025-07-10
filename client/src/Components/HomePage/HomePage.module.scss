@@ -1,0 +1,32 @@
+.card-body {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.card-body-wrapper {
+    width: 90%;
+    margin: 50px auto;
+}
+
+.card-body-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    h4 {
+        font-size: 30px;
+        font-weight: 600;
+    }
+    button {
+        border: none;
+        background: none;
+        font-size: 19px;
+        font-weight: 600;
+        cursor: pointer;
+        border-bottom: 1px solid #000;
+    }
+}
+
+#card-body-header-title {
+    color: #000;
+}

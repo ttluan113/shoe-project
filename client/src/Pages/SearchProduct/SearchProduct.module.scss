@@ -1,0 +1,33 @@
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 80%;
+    margin: 0 auto;
+}
+
+.title {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 800;
+    color: #cc1e1e;
+    border-bottom: 1px solid #cc1e1e;
+    padding-bottom: 10px;
+}
+
+.title-2 {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #cc1e1e;
+    text-align: start;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.pagination {
+    width: 80%;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+}

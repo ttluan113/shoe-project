@@ -1,0 +1,397 @@
+.wrapper {
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+.main {
+    width: 90%;
+    min-height: 100vh;
+    margin: 20px auto;
+}
+
+.info-user {
+    min-height: 100vh;
+    border: 1px solid #eaeaea;
+    padding: 30px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.page-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #333;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.account-tabs {
+    :global {
+        .ant-tabs-nav {
+            width: 250px;
+            background-color: #f9f9f9;
+            border-right: 1px solid #eaeaea;
+            border-radius: 8px 0 0 8px;
+
+            .ant-tabs-tab {
+                padding: 15px 24px;
+                margin: 0;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    color: #cc1e1e;
+                    background-color: rgba(204, 30, 30, 0.05);
+                }
+            }
+
+            .ant-tabs-tab-active {
+                .ant-tabs-tab-btn {
+                    color: #cc1e1e;
+                    font-weight: 600;
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    height: 100%;
+                    width: 3px;
+                    background-color: #cc1e1e;
+                }
+            }
+
+            .ant-tabs-ink-bar {
+                background-color: transparent;
+            }
+        }
+
+        .ant-tabs-content-holder {
+            border-left: none;
+            padding-left: 24px;
+        }
+    }
+}
+
+.tab-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.tab-icon {
+    font-size: 18px;
+}
+
+// Account tab styles
+.account-info-tab {
+    padding: 20px 0;
+}
+
+.user-profile-card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    overflow: hidden;
+
+    :global {
+        .ant-card-body {
+            padding: 24px;
+        }
+    }
+}
+
+.user-profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.user-avatar {
+    margin-bottom: 16px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.user-name {
+    margin: 0 !important;
+    color: #333;
+}
+
+.user-details {
+    margin-top: 20px;
+
+    :global {
+        .ant-descriptions-item-label {
+            width: 140px;
+        }
+    }
+}
+
+.desc-icon {
+    margin-right: 12px;
+    color: #666;
+}
+
+// Orders tab styles
+.orders-tab {
+    padding: 20px 0;
+}
+
+.orders-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    :global {
+        .ant-card-head {
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .ant-card-head-title {
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .ant-card-body {
+            padding: 20px;
+        }
+
+        .ant-empty {
+            margin: 40px 0;
+        }
+    }
+}
+
+.product-info {
+    max-width: 250px;
+}
+
+.orders-table {
+    :global {
+        .ant-table {
+            border-radius: 8px;
+        }
+
+        .ant-table-thead > tr > th {
+            background-color: #f5f5f5;
+            font-weight: 600;
+        }
+
+        .ant-pagination {
+            margin-top: 20px;
+        }
+
+        .ant-table-row:hover {
+            cursor: pointer;
+            background-color: rgba(204, 30, 30, 0.02);
+        }
+    }
+}
+
+// Logout tab styles
+.logout-tab {
+    padding: 20px 0;
+}
+
+.logout-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    :global {
+        .ant-card-body {
+            padding: 40px 24px;
+        }
+    }
+}
+
+.logout-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.logout-icon {
+    font-size: 48px;
+    color: #cc1e1e;
+    margin-bottom: 20px;
+}
+
+.logout-button {
+    margin-top: 20px;
+    height: 45px;
+    font-size: 16px;
+    min-width: 160px;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(204, 30, 30, 0.2);
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .account-tabs {
+        :global {
+            .ant-tabs-nav {
+                width: 200px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .main {
+        width: 95%;
+        margin: 120px auto 50px;
+    }
+
+    .info-user {
+        padding: 20px;
+    }
+
+    .account-tabs {
+        :global {
+            .ant-tabs-tab {
+                padding: 12px 16px;
+            }
+
+            .ant-tabs-nav {
+                width: 170px;
+            }
+
+            .ant-tabs-content-holder {
+                padding-left: 16px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .main {
+        width: 100%;
+        margin: 100px auto 30px;
+    }
+
+    .info-user {
+        padding: 15px;
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+
+    .page-title {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .account-tabs {
+        :global {
+            .ant-tabs-nav {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #eaeaea;
+                background-color: transparent;
+
+                .ant-tabs-tab {
+                    padding: 12px;
+                    margin: 0 10px 0 0 !important;
+                }
+
+                .ant-tabs-tab-btn {
+                    font-size: 14px;
+                }
+            }
+
+            .ant-tabs-tab-active::before {
+                right: auto;
+                top: auto;
+                bottom: 0;
+                height: 3px;
+                width: 100%;
+            }
+
+            .ant-tabs-content-holder {
+                padding-left: 0;
+                padding-top: 16px;
+            }
+        }
+    }
+
+    .user-profile-card,
+    .orders-card,
+    .logout-card {
+        box-shadow: none;
+        border: 1px solid #eaeaea;
+    }
+
+    .tab-label {
+        gap: 5px;
+
+        .tab-icon {
+            font-size: 16px;
+        }
+    }
+
+    .orders-table {
+        :global {
+            .ant-table-cell {
+                padding: 10px 6px;
+                font-size: 13px;
+
+                .ant-typography {
+                    font-size: 13px;
+                }
+            }
+
+            .ant-table-thead > tr > th {
+                padding: 10px 6px;
+                font-size: 13px;
+            }
+        }
+    }
+
+    .product-info {
+        max-width: 120px;
+
+        :global {
+            .ant-image {
+                width: 40px !important;
+                height: 40px !important;
+            }
+        }
+    }
+}
+
+.product-details {
+    font-size: 12px;
+    color: #666;
+    margin-top: 2px;
+}
+
+.modal-products {
+    margin-bottom: 12px;
+}
+
+.modal-product-list {
+    margin-top: 8px;
+    padding-left: 20px;
+
+    li {
+        margin-bottom: 4px;
+        font-size: 14px;
+    }
+}
+
+.warning-text {
+    color: #cc1e1e;
+    margin-top: 15px;
+    font-size: 14px;
+}

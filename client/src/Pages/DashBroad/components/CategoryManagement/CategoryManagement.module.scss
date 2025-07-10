@@ -1,0 +1,119 @@
+.category-management {
+    .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 24px;
+
+        .title-section {
+            h2 {
+                margin: 0;
+                font-size: 20px;
+            }
+
+            .subtitle {
+                color: #8c8c8c;
+                margin-top: 4px;
+                margin-bottom: 0;
+                font-size: 14px;
+            }
+        }
+
+        .actions {
+            display: flex;
+            gap: 16px;
+
+            .search-input {
+                width: 250px;
+            }
+
+            .add-button {
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+        }
+    }
+
+    .table-card {
+        border-radius: 8px;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+
+        .categories-table {
+            :global {
+                .ant-table-thead > tr > th {
+                    background-color: #fafafa;
+                    font-weight: 500;
+                }
+
+                .ant-pagination {
+                    margin-top: 16px;
+                }
+            }
+        }
+    }
+
+    .category-name {
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+
+        .category-icon {
+            margin-right: 8px;
+            color: #1677ff;
+            font-size: 16px;
+        }
+    }
+
+    .count-tag {
+        display: inline-flex;
+        align-items: center;
+        padding: 4px 8px;
+        font-size: 12px;
+        border-radius: 4px;
+    }
+
+    .status-tag {
+        padding: 4px 8px;
+        font-size: 12px;
+        border-radius: 4px;
+    }
+
+    .inactive-row {
+        background-color: #fafafa;
+        opacity: 0.8;
+    }
+
+    .action-buttons {
+        :global {
+            .ant-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .anticon {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .category-modal {
+        .modal-title {
+            display: flex;
+            align-items: center;
+
+            .modal-icon {
+                color: #1677ff;
+                margin-right: 8px;
+                font-size: 18px;
+            }
+        }
+
+        :global {
+            .ant-form-item-label > label {
+                font-weight: 500;
+            }
+        }
+    }
+}
